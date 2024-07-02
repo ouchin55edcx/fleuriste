@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section('content')
-
     <!-- Hero Section -->
     <div class="flex flex-wrap items-center bg-gradient-to-r from-green-50 to-green-100">
         <div class="w-full  lg:w-1/2 p-8 lg:p-16">
@@ -109,24 +108,26 @@
                 </a>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                @foreach ([['name' => 'Bouquet De Roses Rouges', 'price' => 115, 'image' => 'https://placehold.co/300x300'], ['name' => "L'amour", 'price' => 30, 'image' => 'https://placehold.co/300x300'], ['name' => 'Romantique', 'price' => 70, 'image' => 'https://placehold.co/300x300'], ['name' => 'La Saint Valentin', 'price' => 45, 'image' => 'https://placehold.co/300x300']] as $product)
+                @foreach (['Emerald Rose Elegance', 'Verdant Daisy Delight', 'Tropical Green Orchid', 'Forest Wildflower Blend'] as $index => $product)
                     <div
-                        class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out overflow-hidden">
-                        <img src="{{ $product['image'] }}" alt="{{ $product['name'] }}"
-                            class="w-full h-64 object-cover hover:scale-105 transition duration-300 ease-in-out">
-                        <div class="p-6">
-                            <div class="text-2xl font-bold text-gray-800 mb-2">${{ number_format($product['price'], 2) }}
+                        class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                        <div class="relative overflow-hidden">
+                            <img src="https://asset.bloomnation.com/ar_252:252,c_fill,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto,w_1200/v1719872360/vendor/7591/catalog/product/2/0/20240123055455_file_65affd6f34df8_65b005acda09c.jpg"
+                                alt="{{ $product }}"
+                                class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-500">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition duration-300">
                             </div>
-                            <h3 class="text-lg font-semibold text-gray-700 mb-4">{{ $product['name'] }}</h3>
-                            <div class="flex flex-col space-y-2 text-sm text-gray-600">
-                                <div class="flex items-center">
-                                    <i class="fas fa-trophy text-yellow-500 mr-2"></i>
-                                    BEST SELLER
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-truck text-green-500 mr-2"></i>
-                                    NEXT-DAY DELIVERY
-                                </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-green-800 mb-3">{{ $product }}</h3>
+                            <p class="text-gray-600 mb-4">A lush arrangement to bring nature indoors</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-3xl font-bold text-green-600">${{ 39.99 + $index * 10 }}</span>
+                                <button
+                                    class="bg-black text-white px-6 py-3 rounded-full hover:bg-green-800 transition duration-300 transform hover:scale-105">
+                                    Add to Cart
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -134,6 +135,4 @@
             </div>
         </div>
     </section>
-
-
 @endsection
