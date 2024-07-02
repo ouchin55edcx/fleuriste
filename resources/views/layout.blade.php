@@ -30,7 +30,7 @@
                         class="nav-link text-gray-600 hover:text-green-600 transition-colors duration-300">Accueil</a>
                     <a href="{{ route('products.index') }}"
                         class="nav-link text-gray-600 hover:text-green-600 transition-colors duration-300">Bouquets</a>
-                    <a href="#"
+                    <a href="{{url('panier')}}"
                         class="nav-link text-gray-600 hover:text-green-600 transition-colors duration-300 relative">
                         <i class="fas fa-shopping-cart"></i>
                         <span
@@ -45,7 +45,7 @@
         <div class="md:hidden hidden bg-white" id="mobileMenu">
             <a href="{{ url('/') }}" class="block py-2 px-4 text-gray-600 hover:bg-green-50">Accueil</a>
             <a href="{{ route('products.index') }}" class="block py-2 px-4 text-gray-600 hover:bg-green-50">Bouquets</a>
-            <a href="#" class="block py-2 px-4 text-gray-600 hover:bg-green-50">
+            <a href="{{url('panier')}}" class="block py-2 px-4 text-gray-600 hover:bg-green-50">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="ml-2 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-1">1</span>
             </a>

@@ -14,4 +14,8 @@ class ProductController extends Controller
     public function showDetails(){
         return view('pages.productDetails');
     }
+
+    public function showPanier(){
+        return view('pages.panier');
+    }
 }
