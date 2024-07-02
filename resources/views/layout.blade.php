@@ -116,7 +116,6 @@
     </footer>
 
 
-
     <!--script js for navbar -->
     <script src="js/navbar.js"></script>
 
