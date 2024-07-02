@@ -24,7 +24,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <!-- Product Card Template -->
         @foreach(['Emerald Rose Elegance', 'Verdant Daisy Delight', 'Tropical Green Orchid', 'Forest Wildflower Blend'] as $index => $product)
-            <div class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+            <a href="{{ url('productDetails') }}" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
                 <div class="relative overflow-hidden">
                     <img src="https://asset.bloomnation.com/ar_252:252,c_fill,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto,w_1200/v1719872360/vendor/7591/catalog/product/2/0/20240123055455_file_65affd6f34df8_65b005acda09c.jpg" 
                          alt="{{ $product }}" 
@@ -41,7 +41,7 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </a>
         @endforeach
     </div>
 </main>

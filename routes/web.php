@@ -9,3 +9,4 @@ Route::get('/', function () {
 
 // Product route 
 Route::resource('products', ProductController::class);
+Route::get('productDetails', [ProductController::class,'showDetails']);
